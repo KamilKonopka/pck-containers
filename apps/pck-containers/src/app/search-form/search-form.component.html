@@ -1,0 +1,33 @@
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="form">
+      <pck-containers-custom-select
+        formControlName="voivodeship"
+        label="Wojewodztwo"
+        [options]="voivodeships"></pck-containers-custom-select>
+
+      <pck-containers-custom-select
+        formControlName="district"
+        label="Powiat"
+        [options]="[]"></pck-containers-custom-select>
+
+      <pck-containers-custom-select
+        formControlName="area"
+        label="Gmina"
+        [options]="[]"></pck-containers-custom-select>
+
+      <pck-containers-custom-select
+        formControlName="city"
+        label="Miasto"
+        [options]="['Gdansk', 'Gdynia']"></pck-containers-custom-select>
+
+      <pck-containers-custom-select
+        formControlName="address"
+        label="Ulica"
+        [options]="[]"></pck-containers-custom-select>
+      
+      <button mat-raised-button color="primary">Znajdź</button>
+    </form>
+  </mat-card-content>
+</mat-card>
+
