@@ -55,7 +55,7 @@ export class CustomSelectComponent
       .subscribe((value: string) => this.onChange(value));
   }
 
-  override setDisabledState(isDisabled: boolean) {
+  override setDisabledState(isDisabled: boolean): void {
     isDisabled
       ? this.formControl.disable({ emitEvent: false })
       : this.formControl.enable({ emitEvent: false });

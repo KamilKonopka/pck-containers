@@ -4,18 +4,18 @@ export class BaseInput implements ControlValueAccessor {
   value = '';
   disabled = false;
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
   onChange(value: string): void {
-    console.log(value);
+    // Control Value Accessor interface
   }
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onTouched(): void {}
+  onTouched(): void {
+    // Control Value Accessor interface
+  }
 
-  registerOnChange(fn: any): void {
+  registerOnChange(fn: (value: string) => void): void {
     this.onChange = fn;
   }
 
-  registerOnTouched(fn: any): void {
+  registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
   }
 
@@ -23,7 +23,7 @@ export class BaseInput implements ControlValueAccessor {
     this.value = value;
   }
 
-  setDisabledState(isDisabled: boolean) {
+  setDisabledState(isDisabled: boolean): void {
     this.disabled = isDisabled;
   }
 }

@@ -7,10 +7,11 @@ import {
 } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { Location, locationFields } from './models/location';
-import { CustomSelectComponent } from '../../../../../libs/custom-controls/src/lib';
+import { CustomSelectComponent } from '@pck-containers/custom-controls';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatButtonModule } from '@angular/material/button';
+import { TypedForm } from './models/typed-form';
 
 @Component({
   standalone: true,
@@ -54,8 +55,8 @@ export class SearchFormComponent implements OnInit, OnDestroy {
       });
   }
 
-  getForm(): FormGroup {
-    return new FormGroup<Record<keyof Location, FormControl<string>>>({
+  getForm(): FormGroup<TypedForm<Location>> {
+    return new FormGroup<TypedForm<Location>>({
       voivodeship: new FormControl(),
       district: new FormControl(),
       area: new FormControl(),
