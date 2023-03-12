@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pck-containers/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@pck-containers/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@pck-containers/custom-controls": ["libs/custom-controls/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

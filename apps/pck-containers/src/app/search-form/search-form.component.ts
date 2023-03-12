@@ -7,7 +7,7 @@ import {
 } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { Location, locationFields } from './models/location';
-import { CustomSelectComponent } from '../custom-inputs';
+import { CustomSelectComponent } from '../../../../../libs/custom-controls/src/lib';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatButtonModule } from '@angular/material/button';
